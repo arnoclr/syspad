@@ -161,13 +161,13 @@ export class Wagon {
             ),
           },
           leavesAt: dayjs(
-            departure.departure.realTime ||
-              departure.departure.theoretical ||
+            departure.departure?.realTime ||
+              departure.departure?.theoretical ||
               "invalid"
           ),
           arrivesAt: dayjs(
-            departure.arrival.realTime ||
-              departure.arrival.theoretical ||
+            departure.arrival?.realTime ||
+              departure.arrival?.theoretical ||
               "invalid"
           ),
           id: departure.journeyId,
