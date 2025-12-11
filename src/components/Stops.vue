@@ -108,10 +108,18 @@ function updatePaths() {
   const _paths = [];
 
   for (const journey of props.journeys) {
-    const points = journey.stops.map((stop) => {
+    const points = journey.stops.flatMap((stop) => {
       const element = document.getElementById(stop.id);
       if (!element) {
         return { x: 0, y: 0 };
+      }
+
+      const visualBalancer = document.getElementById(
+        `visual-balancer-${stop.id}`
+      );
+
+      if (visualBalancer) {
+        return [getFixedPosition(element), getFixedPosition(visualBalancer)];
       }
 
       return getFixedPosition(element);
@@ -263,6 +271,16 @@ watch(
               animated: backgroundColor(stop.id) === 'var(--title-color)',
             }"
           ></div>
+        </div>
+        <div class="stop" v-if="group.length > 1 && floor.length === 1">
+          <StopName
+            :name="group.at(0)?.at(-1)?.name || ''"
+            :char-limit="20"
+            :is-inactive="false"
+            :compact="false"
+          ></StopName>
+          <div class="anchor" :id="'visual-balancer-' + floor.at(0)?.id"></div>
+          <div class="dot"></div>
         </div>
       </div>
     </div>
