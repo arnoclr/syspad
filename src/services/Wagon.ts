@@ -1,4 +1,5 @@
 import dayjs, { Dayjs } from "dayjs";
+import type { Point } from "../geo";
 
 export interface SimpleLine {
   id: string;
@@ -52,7 +53,7 @@ function processSVG(svg: string): string {
 }
 
 export class Wagon {
-  private static BASE_URL = "https://api-wagon.arno.cl/gantry/";
+  private static BASE_URL = "http://localhost:8787/gantry/";
 
   private static get baseUrl(): string {
     return Wagon.BASE_URL;
@@ -97,43 +98,17 @@ export class Wagon {
     };
   }
 
-  public static async searchStops(search: string): Promise<SimpleStop[]> {
-    const params = new URLSearchParams();
-    params.append("action", "searchStops");
-    params.append("coordinates", "48.86,2.34");
-    params.append("compatibilityDate", "2024-03-30");
-    params.append("apiKey", this.apiKey);
-    params.append("q", search);
-
-    const response = await fetch(`${this.baseUrl}?${params.toString()}`);
-
-    if (!response.ok) {
-      throw new Error("Failed to search stations");
-    }
-
-    const json = await response.json();
-
-    const lines: SimpleLine[] = json.data.lines.map((line: any) => {
-      return this.lineFromDTO(line);
-    });
-
-    const stops: SimpleStop[] = json.data.stops.map((stop: any) => {
-      return this.stopFromDTO(stop, lines);
-    });
-
-    return stops;
-  }
-
   public static async departures(
     lineId: string,
     stopIds: string[],
+    region: Point,
     /** @deprecated */
     isTerminus: boolean = false
   ): Promise<SimpleDeparture[]> {
     let params = new URLSearchParams();
 
     params.append("action", "departures");
-    params.append("coordinates", "48.8,2.3");
+    params.append("coordinates", `${region.lat},${region.lon}`);
     params.append("line", lineId);
     params.append(
       "stops",
@@ -182,7 +157,10 @@ export class Wagon {
       );
   }
 
-  public static async journey(journeyId: string): Promise<{
+  public static async journey(
+    journeyId: string,
+    region: Point
+  ): Promise<{
     id: string;
     stops: SimpleStop[];
     line: SimpleLine;
@@ -192,7 +170,7 @@ export class Wagon {
     let params = new URLSearchParams();
 
     params.append("action", "journey");
-    params.append("coordinates", "48.8,2.3");
+    params.append("coordinates", `${region.lat},${region.lon}`);
     params.append("journeyId", journeyId);
     params.append("compatibilityDate", "2025-01-21");
     params.append("apiKey", this.apiKey);

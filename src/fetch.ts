@@ -17,7 +17,11 @@ export async function nextTrainJourneys(
   terminusPosition: Point | undefined,
   previousJourneys: SimpleJourney[]
 ): Promise<SimpleJourney[]> {
-  const departures = await Wagon.departures(lineId, [currentStopId]);
+  const departures = await Wagon.departures(
+    lineId,
+    [currentStopId],
+    terminusPosition || { lat: 0, lon: 0 }
+  );
 
   const nearestTerminusBranchHash =
     terminusPosition &&
@@ -41,12 +45,15 @@ export async function nextTrainJourneys(
     const isFirstJourney = first.at(0)?.id === departure.id;
 
     if (isFirstJourney && needToRefreshFirstJourney) {
-      return Wagon.journey(departure.id);
+      return Wagon.journey(
+        departure.id,
+        terminusPosition || { lat: 0, lon: 0 }
+      );
     }
 
     return (
       previousJourneys.find((x) => x.id === departure.id) ||
-      Wagon.journey(departure.id)
+      Wagon.journey(departure.id, terminusPosition || { lat: 0, lon: 0 })
     );
   }
 
