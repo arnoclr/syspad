@@ -53,7 +53,7 @@ function processSVG(svg: string): string {
 }
 
 export class Wagon {
-  private static BASE_URL = "http://localhost:8787/gantry/";
+  private static BASE_URL = "https://api-wagon.arno.cl/gantry/";
 
   private static get baseUrl(): string {
     return Wagon.BASE_URL;
