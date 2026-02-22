@@ -33,7 +33,7 @@ const stops = computed<Graph<SimpleStop>>(() => {
 });
 
 const skippedStops = computed(
-  () => props.journeys.at(0)?.skippedStops || new Set<string>()
+  () => props.journeys.at(0)?.skippedStops || new Set<string>(),
 );
 
 // const closedStops = computed(() =>
@@ -85,7 +85,7 @@ const nextDesservedStops = computed(() => {
 function isStopHidden(
   floor: SimpleStop[],
   i: number,
-  stop: SimpleStop
+  stop: SimpleStop,
 ): boolean {
   if (someStopsOutOfScreen.value === false || props.static) {
     return false;
@@ -115,7 +115,7 @@ function updatePaths() {
       }
 
       const visualBalancer = document.getElementById(
-        `visual-balancer-${stop.id}`
+        `visual-balancer-${stop.id}`,
       );
 
       if (visualBalancer) {
@@ -190,7 +190,7 @@ watch(
     await promiseTimeout(500);
     updatePaths();
   },
-  { immediate: true }
+  { immediate: true },
 );
 </script>
 
@@ -228,6 +228,9 @@ watch(
         v-for="(floor, _) in group.sort(northToSouth)"
         :style="{
           gap: someStopsOutOfScreen ? '3vh' : 12 / group.length + 'vh',
+        }"
+        :class="{
+          small: floor.length <= 3,
         }"
       >
         <div
@@ -289,13 +292,13 @@ watch(
 
 <style scoped>
 .groups {
-  padding-top: 30vh;
+  padding-top: 25vh;
   /* transform: translateY(-10%); */
   position: relative;
   padding-left: 8vh;
   display: flex;
-  gap: 40vh;
-  height: 60vh;
+  gap: 45vh;
+  height: 65vh;
   max-width: calc(100vw - 32vh);
   width: fit-content;
   justify-content: space-between;
@@ -312,12 +315,25 @@ watch(
   justify-content: space-between;
 }
 
-.groups:not(.compact) .floors:first-child {
-  /* min-width: 120vh; */
+.floors:first-child {
+  --path-gap: 8vh;
+  padding-right: var(--path-gap);
+}
+
+.floors:first-child .stop:last-child .anchor {
+  transform: translateX(var(--path-gap));
+}
+
+.groups .floors:first-child {
+  min-width: 122vh;
 }
 
 .floor:only-child {
   margin: auto 0;
+}
+
+.floor.small:last-child:not(:only-child) {
+  transform: translateY(-50%);
 }
 
 .floor {

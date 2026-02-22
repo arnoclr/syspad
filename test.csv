@@ -2,3 +2,4 @@ agency_id,route,url
 cz-plz,Tram 4,http://localhost:5173/?from=cz-plz_121&route=cz-plz_2523&to=49.77820969%2C13.36921978&shortTrainMessage=none
 cz-pid,Metro B,http://localhost:5173/?from=cz-pid_U1141S1&route=cz-pid_L992&to=50.10893%2C14.57678&shortTrainMessage=none
 cz-pid,S7,http://localhost:5173/?from=cz-pid_U142Z301&route=cz-pid_L1307&to=49.931999%2C14.175151&shortTrainMessage=none
+fr-idf,RER A,http://localhost:5173/?from=stop_area%3AIDFM%3A73626&route=line%3AIDFM%3AC01742&to=48.93292481960792%2C2.0406466644966867&shortTrainMessage=right
