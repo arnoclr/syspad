@@ -38,7 +38,7 @@ watch(
       titleActive.value = false;
     }
   },
-  { immediate: true }
+  { immediate: true },
 );
 
 useIntervalFn(async () => {
@@ -106,6 +106,7 @@ useIntervalFn(async () => {
 
 .text {
   min-width: 60vh;
+  max-width: 112vh;
   position: relative;
   z-index: 2;
   padding: 2vh 6vh;
