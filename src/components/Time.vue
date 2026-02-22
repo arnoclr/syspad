@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import { useIntervalFn } from "@vueuse/core";
+import dayjs from "dayjs";
 import { ref } from "vue";
 
 const time = ref("");
 
 useIntervalFn(() => {
-  time.value = new Date().toLocaleTimeString().slice(0, -3);
+  time.value = dayjs().format("HH:mm");
 }, 1000);
 </script>
 
