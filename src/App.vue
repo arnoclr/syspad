@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {
+  computedAsync,
   promiseTimeout,
   useDocumentVisibility,
   useIntervalFn,
@@ -12,13 +13,45 @@ import Time from "./components/Time.vue";
 import { nextTrainJourneys } from "./fetch";
 import type { SimpleDeparture, SimpleJourney } from "./services/Wagon";
 import RepairScreen from "./components/RepairScreen.vue";
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 import OfflineHeader from "./components/OfflineHeader.vue";
 import ShortTrainBubble from "./components/ShortTrainBubble.vue";
+import MiniETA from "./components/MiniETA.vue";
+import { getFixedPosition } from "./layout";
+import { extractNextUniqueDepartures } from "./journeys";
+
+interface MiniETAPosition {
+  x: number;
+  y: number;
+  eta: Dayjs;
+}
 
 const journeys = ref<SimpleJourney[] | null>(null);
-
 const nextDeparture = ref<SimpleDeparture | undefined>(undefined);
+
+const miniETAs = computedAsync<MiniETAPosition[]>(async () => {
+  if (!journeys.value) return [];
+  const departures = extractNextUniqueDepartures(journeys.value);
+  await promiseTimeout(10000);
+  console.log(departures);
+  return departures.map((departure) => {
+    const anchor = document.getElementById(departure.terminusId);
+    console.log(anchor);
+    if (!anchor) {
+      return {
+        x: -999,
+        y: -999,
+        eta: departure.eta,
+      };
+    }
+    const { x, y } = getFixedPosition(anchor);
+    return {
+      x,
+      y,
+      eta: departure.eta,
+    };
+  });
+}, []);
 
 const params = ref<{
   currentStopId: string;
@@ -45,7 +78,7 @@ async function updateJourneys() {
     params.value.currentStopId,
     params.value.lineId,
     params.value.terminusPosition,
-    journeys.value || []
+    journeys.value || [],
   );
 
   lastUpdate.value = dayjs();
@@ -61,9 +94,12 @@ const interval = useIntervalFn(async () => {
 }, 61 * 1000);
 
 onMounted(async () => {
-  setTimeout(() => {
-    window.location.reload();
-  }, 1000 * 60 * 60 * 18);
+  setTimeout(
+    () => {
+      window.location.reload();
+    },
+    1000 * 60 * 60 * 18,
+  );
 
   const urlParams = new URLSearchParams(window.location.search);
   const terminusPosition = urlParams.get("to")?.split(",").map(parseFloat);
@@ -86,7 +122,7 @@ watch(
     preventAnimation();
     await promiseTimeout(1500);
     nextDeparture.value = journeys.value?.at(0)?.userStopDeparture;
-  }
+  },
 );
 
 watch(visibility, async (value) => {
@@ -129,6 +165,17 @@ watch(visibility, async (value) => {
         class="shortTrainBubble"
         :class="params?.shortTrainMessage"
       ></ShortTrainBubble>
+      <MiniETA
+        :style="{
+          position: 'absolute',
+          top: `${miniETA.y}px`,
+          left: `${miniETA.x}px`,
+        }"
+        v-for="miniETA in miniETAs"
+        v-show="canAnimate"
+        :key="miniETA.x + miniETA.y"
+        :eta="miniETA.eta"
+      ></MiniETA>
     </template>
   </template>
   <RepairScreen v-else></RepairScreen>

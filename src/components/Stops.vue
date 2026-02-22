@@ -227,7 +227,7 @@ watch(
         class="floor"
         v-for="(floor, _) in group.sort(northToSouth)"
         :style="{
-          gap: someStopsOutOfScreen ? '3vh' : 12 / group.length + 'vh',
+          gap: someStopsOutOfScreen ? '3vh' : 10 / group.length + 'vh',
         }"
         :class="{
           small: floor.length <= 3,
