@@ -7,6 +7,7 @@ export const extractNextUniqueDepartures = (journeysList: SimpleJourney[]) => {
     { terminusId: string; eta: Dayjs }
   >();
   const terminuses = new Set<string>();
+  const nextTerminus = journeysList.at(1)?.stops.at(-1)?.id;
 
   for (const journey of journeysList) {
     const terminusId = journey.stops.at(-1)?.id;
@@ -25,6 +26,7 @@ export const extractNextUniqueDepartures = (journeysList: SimpleJourney[]) => {
     if (
       terminusId &&
       terminuses.has(terminusId) &&
+      nextTerminus !== terminusId &&
       !uniqueDepartures.has(terminusId)
     ) {
       uniqueDepartures.set(terminusId, {
