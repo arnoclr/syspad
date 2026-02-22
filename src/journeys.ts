@@ -19,7 +19,7 @@ export const extractNextUniqueDepartures = (journeysList: SimpleJourney[]) => {
     }
   }
 
-  for (const journey of journeysList) {
+  for (const journey of journeysList.slice(1)) {
     const terminusId = journey.stops.at(-1)?.id;
 
     if (
