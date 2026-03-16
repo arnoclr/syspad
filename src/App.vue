@@ -1,25 +1,20 @@
 <script setup lang="ts">
-import {
-  computedAsync,
-  promiseTimeout,
-  useDocumentVisibility,
-  useIntervalFn,
-  useTimeout,
-} from "@vueuse/core";
+import { computedAsync, promiseTimeout, useTimeout } from "@vueuse/core";
+import { Dayjs } from "dayjs";
 import { computed, onMounted, ref, watch } from "vue";
 import Header from "./components/Header.vue";
+import MiniETA from "./components/MiniETA.vue";
+import OfflineHeader from "./components/OfflineHeader.vue";
+import RepairScreen from "./components/RepairScreen.vue";
+import ShortTrainBubble from "./components/ShortTrainBubble.vue";
 import Stops from "./components/Stops.vue";
 import Time from "./components/Time.vue";
-import { nextTrainJourneys } from "./fetch";
-import type { SimpleDeparture, SimpleJourney } from "./services/Wagon";
-import RepairScreen from "./components/RepairScreen.vue";
-import dayjs, { Dayjs } from "dayjs";
-import OfflineHeader from "./components/OfflineHeader.vue";
-import ShortTrainBubble from "./components/ShortTrainBubble.vue";
-import MiniETA from "./components/MiniETA.vue";
-import { getFixedPosition } from "./layout";
-import { extractNextUniqueDepartures } from "./journeys";
 import { useArrivingStatus } from "./composables/useArrivingStatus";
+import { useJourneys } from "./composables/useJourneys";
+import { extractNextUniqueDepartures } from "./journeys";
+import { getFixedPosition } from "./layout";
+import type { SimpleDeparture } from "./services/Wagon";
+import type { ApplicationParams } from "./types";
 
 interface MiniETAPosition {
   x: number;
@@ -27,8 +22,9 @@ interface MiniETAPosition {
   eta: Dayjs;
 }
 
-const journeys = ref<SimpleJourney[] | null>(null);
+const params = ref<ApplicationParams>(null);
 const nextDeparture = ref<SimpleDeparture | undefined>(undefined);
+const { journeys, nextDepartureIsInPast } = useJourneys(params);
 
 const miniETAs = computedAsync<MiniETAPosition[]>(async () => {
   if (!journeys.value) return [];
@@ -54,45 +50,11 @@ const miniETAs = computedAsync<MiniETAPosition[]>(async () => {
   });
 }, []);
 
-const params = ref<{
-  currentStopId: string;
-  lineId: string;
-  terminusPosition: { lat: number; lon: number } | undefined;
-  shortTrainMessage?: "right" | "left" | string;
-} | null>(null);
-
 const lineLogo = computed(() => journeys.value?.at(0)?.line.numberShapeSvg);
 
 const { ready: canAnimate, start: preventAnimation } = useTimeout(4000, {
   controls: true,
 });
-
-const visibility = useDocumentVisibility();
-const lastUpdate = ref(dayjs());
-const nextDepartureIsInPast = ref(true);
-
-async function updateJourneys() {
-  if (params.value === null) return;
-  if (visibility.value !== "visible") return;
-
-  journeys.value = await nextTrainJourneys(
-    params.value.currentStopId,
-    params.value.lineId,
-    params.value.terminusPosition,
-    journeys.value || [],
-  );
-
-  lastUpdate.value = dayjs();
-  nextDepartureIsInPast.value =
-    journeys.value
-      ?.at(0)
-      ?.userStopDeparture.leavesAt.isBefore(dayjs().subtract(1, "minute")) ??
-    true;
-}
-
-const interval = useIntervalFn(async () => {
-  await updateJourneys();
-}, 61 * 1000);
 
 const { status, remainingMinutes } = useArrivingStatus(nextDeparture);
 
@@ -115,8 +77,6 @@ onMounted(async () => {
       : undefined,
     shortTrainMessage: urlParams.get("shortTrainMessage") ?? undefined,
   };
-
-  await updateJourneys();
 });
 
 watch(
@@ -127,19 +87,10 @@ watch(
     nextDeparture.value = journeys.value?.at(0)?.userStopDeparture;
   },
 );
-
-watch(visibility, async (value) => {
-  if (
-    value === "visible" &&
-    lastUpdate.value.isBefore(dayjs().subtract(1, "minute"))
-  ) {
-    await updateJourneys();
-  }
-});
 </script>
 
 <template>
-  <template v-if="lineLogo && interval.isActive">
+  <template v-if="lineLogo">
     <Time class="time"></Time>
     <div class="logo" v-html="lineLogo"></div>
     <template v-if="nextDeparture">
