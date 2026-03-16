@@ -66,6 +66,16 @@ useIntervalFn(async () => {
           </div>
         </div>
       </div>
+      <div class="relative">
+        <div class="contextual">
+          <div class="journeyCode" v-if="departure.journeyCode">
+            <span>{{ departure.journeyCode }}</span>
+          </div>
+          <div class="shortTrain" v-if="departure.vehicleLength === 'SHORT'">
+            <span>Train court !</span>
+          </div>
+        </div>
+      </div>
       <div class="minutes">
         <span class="textual" v-if="position === 'atPlatform'">à quai</span>
         <span class="textual" v-else-if="position === 'approaching'">
@@ -81,14 +91,6 @@ useIntervalFn(async () => {
           {{ Math.floor(remainingMinutes / 60) }}
           <small>h{{ remainingMinutes % 60 }}</small>
         </span>
-      </div>
-    </div>
-    <div class="contextual">
-      <div class="journeyCode" v-if="departure.journeyCode">
-        <span>{{ departure.journeyCode }}</span>
-      </div>
-      <div class="shortTrain" v-if="departure.vehicleLength === 'SHORT'">
-        <span>Train court !</span>
       </div>
     </div>
   </div>
@@ -109,14 +111,15 @@ useIntervalFn(async () => {
   max-width: 112vh;
   position: relative;
   z-index: 2;
-  padding: 2vh 6vh;
+  padding: 1vh 6vh;
+  padding-bottom: 0px;
   display: flex;
   flex-direction: column;
   background-color: white;
 }
 
 .text span {
-  font-size: 4vh;
+  font-size: 3vh;
   color: var(--gray);
 }
 
@@ -139,6 +142,7 @@ h1 {
   margin: 0;
   font-size: 9vh;
   color: var(--title-color);
+  transform: translateY(-1vh);
   min-width: 40vh;
   white-space: nowrap;
 }
@@ -149,7 +153,7 @@ h1 {
   justify-content: center;
   align-items: center;
   background-color: black;
-  min-width: 20vh;
+  min-width: 16vh;
   color: var(--time-color, yellow);
   border-radius: 0 1vh 1vh 0;
   transform: translateX(-100%);
@@ -173,12 +177,13 @@ h1 {
 .minutes label {
   margin-top: -1vh;
   font-size: 4vh;
+  line-height: 3vh;
   opacity: 0.7;
 }
 
 .minutes .textual {
-  padding: 0 4vh;
-  font-size: 7vh;
+  padding: 0 1vh;
+  font-size: 5vh;
 }
 
 .zoomable {
@@ -191,10 +196,15 @@ h1 {
   transform: scale(1.25);
 }
 
+.relative {
+  position: relative;
+}
+
 .contextual {
+  right: 0;
+  top: 100%;
+  position: absolute;
   transform: translateY(-100%);
-  margin-left: 12vh;
-  display: flex;
   transition: transform 1s cubic-bezier(0.15, -0.04, 0.08, 0.94);
 }
 
@@ -203,11 +213,11 @@ h1 {
 }
 
 .journeyCode {
-  padding: 1.4vh 4vh;
+  padding: 1.4vh 3vh;
   background-color: var(--gray);
   color: white;
   width: fit-content;
-  font-size: 4vh;
+  font-size: 3vh;
   border-radius: 0 0 1vh 1vh;
 }
 
