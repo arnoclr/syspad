@@ -13,6 +13,7 @@ const props = defineProps<{
 const contextActive = ref(false);
 const titleActive = ref(false);
 const minutesZoomedIn = ref(false);
+const delayedRemainingMinutes = ref(-1);
 
 watch(
   () => props.canAnimate,
@@ -31,10 +32,14 @@ watch(
 
 watch(
   () => props.remainingMinutes,
-  async () => {
+  async (minutes) => {
     minutesZoomedIn.value = true;
     await promiseTimeout(1000);
+    delayedRemainingMinutes.value = minutes;
     minutesZoomedIn.value = false;
+  },
+  {
+    immediate: true,
   },
 );
 </script>
@@ -65,15 +70,15 @@ watch(
         <span class="textual" v-else-if="position === 'approaching'">
           à l'approche
         </span>
-        <template v-else-if="remainingMinutes <= 60">
+        <template v-else-if="delayedRemainingMinutes <= 60">
           <span class="zoomable" :class="{ minutesZoomedIn }">{{
-            Math.max(0, remainingMinutes)
+            Math.max(0, delayedRemainingMinutes)
           }}</span>
           <label>min</label>
         </template>
         <span v-else>
-          {{ Math.floor(remainingMinutes / 60) }}
-          <small>h{{ remainingMinutes % 60 }}</small>
+          {{ Math.floor(delayedRemainingMinutes / 60) }}
+          <small>h{{ delayedRemainingMinutes % 60 }}</small>
         </span>
       </div>
     </div>
