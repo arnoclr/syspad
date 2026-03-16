@@ -30,10 +30,11 @@ div {
   display: flex;
   align-items: center;
   gap: 12vh;
-  padding: 4vh 12vh;
+  padding: 3vh 10vh;
   background-color: gray;
   color: white;
-  font-size: 6vh;
+  font-size: 7vh;
+  border-radius: 999px;
 }
 
 svg {

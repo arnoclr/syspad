@@ -11,7 +11,7 @@ import StopName from "./StopName.vue";
 const props = defineProps<{
   journeys: SimpleJourney[];
   canAnimate: boolean;
-  static: boolean;
+  mode: "dynamic" | "atPlatform" | "noData";
 }>();
 
 const paths = ref<
@@ -87,7 +87,7 @@ function isStopHidden(
   i: number,
   stop: SimpleStop,
 ): boolean {
-  if (someStopsOutOfScreen.value === false || props.static) {
+  if (someStopsOutOfScreen.value === false || props.mode === "noData") {
     return false;
   }
 
@@ -169,7 +169,7 @@ function backgroundColor(stopId: string) {
 
   if (
     [...nextDesservedStops.value.values()].at(-1) === stopId &&
-    !props.static
+    props.mode !== "noData"
   ) {
     return "white";
   }
@@ -202,7 +202,7 @@ watch(
       :is-animated="i === 0 && canAnimate"
       :is-inactive="false"
       :can-animate="canAnimate"
-      :static="static"
+      :static="mode === 'atPlatform' && i === 0 && canAnimate"
       v-for="(path, i) in paths"
     ></AnimatedPath>
   </div>
@@ -219,7 +219,11 @@ watch(
   </div>
   <div
     class="groups"
-    :class="{ compact: someStopsOutOfScreen, hidden: !canAnimate, static }"
+    :class="{
+      compact: someStopsOutOfScreen,
+      hidden: !canAnimate,
+      static: mode === 'noData',
+    }"
     :style="{ '--line-color': '#' + (line?.backgroundColor ?? '000000') }"
   >
     <div class="floors" v-for="(group, i) in stops.groupedTopologicalPaths">
@@ -263,7 +267,7 @@ watch(
             :name="stop.name"
             :is-inactive="
               (!nextDesservedStops.has(stop.id) || skippedStops.has(stop.id)) &&
-              !static
+              mode !== 'noData'
             "
             :background-color="backgroundColor(stop.id)"
           ></StopName>

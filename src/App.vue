@@ -19,6 +19,7 @@ import ShortTrainBubble from "./components/ShortTrainBubble.vue";
 import MiniETA from "./components/MiniETA.vue";
 import { getFixedPosition } from "./layout";
 import { extractNextUniqueDepartures } from "./journeys";
+import { useArrivingStatus } from "./composables/useArrivingStatus";
 
 interface MiniETAPosition {
   x: number;
@@ -93,6 +94,8 @@ const interval = useIntervalFn(async () => {
   await updateJourneys();
 }, 61 * 1000);
 
+const { status, remainingMinutes } = useArrivingStatus(nextDeparture);
+
 onMounted(async () => {
   setTimeout(
     () => {
@@ -149,10 +152,18 @@ watch(visibility, async (value) => {
         :can-animate="canAnimate"
         class="header"
         :departure="nextDeparture"
+        :remaining-minutes="remainingMinutes"
+        :position="status"
       ></Header>
       <Stops
         :can-animate="canAnimate"
-        :static="nextDepartureIsInPast"
+        :mode="
+          nextDepartureIsInPast
+            ? 'noData'
+            : status === 'atPlatform'
+              ? 'atPlatform'
+              : 'dynamic'
+        "
         v-if="journeys"
         :journeys="journeys"
       ></Stops>

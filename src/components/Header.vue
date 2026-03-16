@@ -1,30 +1,18 @@
 <script lang="ts" setup>
-import { promiseTimeout, useIntervalFn } from "@vueuse/core";
-import dayjs from "dayjs";
+import { promiseTimeout } from "@vueuse/core";
 import { ref, watch } from "vue";
 import type { SimpleDeparture } from "../services/Wagon";
 
 const props = defineProps<{
   departure: SimpleDeparture;
   canAnimate: boolean;
+  remainingMinutes: number;
+  position: "atPlatform" | "approaching" | "farAway";
 }>();
-
-const remainingMinutes = ref(-1);
 
 const contextActive = ref(false);
 const titleActive = ref(false);
-const position = ref<"farAway" | "approaching" | "atPlatform">("farAway");
 const minutesZoomedIn = ref(false);
-
-function updatePosition() {
-  if (props.departure.arrivesAt.isBefore(dayjs())) {
-    position.value = "atPlatform";
-  } else if (remainingMinutes.value <= 0) {
-    position.value = "approaching";
-  } else {
-    position.value = "farAway";
-  }
-}
 
 watch(
   () => props.canAnimate,
@@ -41,18 +29,14 @@ watch(
   { immediate: true },
 );
 
-useIntervalFn(async () => {
-  const newRemainingMinutes = props.departure.arrivesAt.diff(dayjs(), "minute");
-
-  if (newRemainingMinutes !== remainingMinutes.value) {
+watch(
+  () => props.remainingMinutes,
+  async () => {
     minutesZoomedIn.value = true;
     await promiseTimeout(1000);
-    remainingMinutes.value = newRemainingMinutes;
     minutesZoomedIn.value = false;
-  }
-
-  updatePosition();
-}, 3000);
+  },
+);
 </script>
 
 <template>
