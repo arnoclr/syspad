@@ -37,7 +37,7 @@ const lines = computed(() => {
 const formattedName = computed(() => {
   return lines.value.reduce(
     (prev, curr, i) => prev + "\n" + " ".repeat(6).repeat(i) + curr,
-    ""
+    "",
   );
 });
 
@@ -47,7 +47,7 @@ const width = computed(() => {
   }
 
   const longestLineCharCount = Math.max(
-    ...lines.value.map((line) => line.length)
+    ...lines.value.map((line) => line.length),
   );
   const linesCount = lines.value.length;
 
@@ -136,10 +136,12 @@ span.whiteText {
 }
 
 .dotBackground {
+  width: auto;
   height: 4.2vh;
   bottom: 0;
+  left: 0;
   position: absolute;
-  transform: translateY(-30%) scale(3.6);
+  transform: translateY(-30%) translateX(20%) scale(3.6);
 }
 
 .lettersBackground {
