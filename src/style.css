@@ -13,13 +13,13 @@ body {
 @font-face {
     font-family: 'Parisine';
     font-weight: bold;
-    src: url('/Parisine-Bold.otf');
+    src: url('/Parisine-Bold.woff2');
 }
 
 @font-face {
     font-family: 'Parisine';
     font-weight: normal;
-    src: url('/Parisine-Regular.otf');
+    src: url('/Parisine-Regular.woff2');
 }
 
 :root {
