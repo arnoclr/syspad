@@ -15,7 +15,9 @@ export async function nextTrainJourneys(
   currentStopId: string,
   lineId: string,
   terminusPosition: Point | undefined,
-  previousJourneys: SimpleJourney[]
+  previousJourneys: SimpleJourney[],
+  fetchCount = 4,
+  mockJourneyUrl?: string
 ): Promise<SimpleJourney[]> {
   const departures = await Wagon.departures(
     lineId,
@@ -31,7 +33,7 @@ export async function nextTrainJourneys(
     }))?.branchHash;
 
   const first = firstUnique(
-    4,
+    fetchCount,
     (x) => x.journeyCode?.slice(0, 2) || x.destination.name,
     departures.filter((x) =>
       nearestTerminusBranchHash
@@ -47,13 +49,18 @@ export async function nextTrainJourneys(
     if (isFirstJourney && needToRefreshFirstJourney) {
       return Wagon.journey(
         departure.id,
-        terminusPosition || { lat: 0, lon: 0 }
+        terminusPosition || { lat: 0, lon: 0 },
+        mockJourneyUrl
       );
     }
 
     return (
       previousJourneys.find((x) => x.id === departure.id) ||
-      Wagon.journey(departure.id, terminusPosition || { lat: 0, lon: 0 })
+      Wagon.journey(
+        departure.id,
+        terminusPosition || { lat: 0, lon: 0 },
+        mockJourneyUrl
+      )
     );
   }
 

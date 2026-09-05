@@ -1,0 +1,2771 @@
+{
+    "Need an API key ?": "wagon-api-request@arno.cl",
+    "sources": [],
+    "data": {
+        "line": {
+            "id": "fr-idf_IDFM:C01743",
+            "number": "B",
+            "backgroundColor": "5091cb",
+            "textColor": "ffffff",
+            "shape": "no-background",
+            "illustration": "https://transportsapp-cdn-1.arno.cl/fr-idf/RER_B.png",
+            "importance": 0,
+            "isOnRoad": false,
+            "modeSvg": "<svg width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_271_3223)\"><path d=\"M25.7629 12.6759C25.7629 10.6509 24.2624 9.7124 22.7999 9.7124H19.9874C19.4584 9.7124 19.1634 10.1244 19.1634 10.5749V19.3889C19.1634 19.9184 19.6924 20.1754 20.1749 20.1754C20.7379 20.1754 21.1879 19.9139 21.1879 19.3889V15.9809H22.0499L23.7369 19.7679C23.8017 19.8994 23.9041 20.0087 24.0311 20.082C24.1582 20.1553 24.3041 20.1892 24.4504 20.1794C25.0494 20.1794 25.9129 19.6179 25.5754 18.9434L23.9624 15.5684C24.9374 15.0794 25.7614 14.2184 25.7614 12.6799L25.7629 12.6759ZM18.1504 19.2009C18.1504 18.7499 17.8499 18.2639 17.3249 18.2639H14.4749V15.6764H16.8369C16.9479 15.6746 17.0575 15.6508 17.1592 15.6063C17.261 15.5619 17.3529 15.4977 17.4297 15.4175C17.5065 15.3373 17.5666 15.2426 17.6065 15.139C17.6465 15.0354 17.6654 14.9249 17.6624 14.8139C17.6624 14.3639 17.3619 13.9504 16.8374 13.9504H14.4749V11.5879H17.0999C17.6294 11.5879 17.9249 11.0589 17.9249 10.6514C17.9249 10.2004 17.6249 9.7134 17.0999 9.7134H13.2749C12.7459 9.7134 12.4504 10.1254 12.4504 10.5764V19.3514C12.4504 19.8799 12.9799 20.1384 13.4634 20.1384H17.3254C17.8544 20.1384 18.1504 19.6099 18.1504 19.2009ZM11.2489 12.6759C11.2489 10.6509 9.75039 9.7124 8.28539 9.7124H5.47489C4.95089 9.7124 4.65039 10.1244 4.65039 10.5749V19.3889C4.65039 19.9184 5.17989 20.1754 5.66239 20.1754C6.22439 20.1754 6.67389 19.9139 6.67389 19.3889V15.9809H7.53789L9.23089 19.7679C9.2957 19.8992 9.39797 20.0084 9.52478 20.0816C9.65159 20.1549 9.79726 20.1889 9.94339 20.1794C10.5434 20.1794 11.4049 19.6179 11.0684 18.9434L9.44989 15.5639C10.4254 15.0754 11.2489 14.2139 11.2489 12.6759ZM23.6624 12.9009C23.6624 14.1709 22.4979 14.4749 21.7879 14.4749H21.1879V11.4374H21.8989C22.8379 11.4374 23.6624 11.8509 23.6624 12.9009ZM9.14989 12.9009C9.14989 14.1709 7.98589 14.4749 7.27489 14.4749H6.67339V11.4374H7.38839C8.32489 11.4374 9.15039 11.8514 9.15039 12.9014L9.14989 12.9009Z\" fill=\"#25303B\"/><path d=\"M23.251 30H6.75C4.95996 30 3.24322 29.289 1.97738 28.0233C0.711541 26.7577 0.000265191 25.041 0 23.251L0 6.75C0.000265146 4.95987 0.711509 3.24314 1.97732 1.97732C3.24314 0.711509 4.95987 0.000265146 6.75 0L23.251 0C25.041 0.000265191 26.7577 0.711541 28.0233 1.97738C29.289 3.24322 30 4.95996 30 6.75V23.251C30 24.1373 29.8254 25.0149 29.4863 25.8337C29.1471 26.6526 28.65 27.3966 28.0233 28.0233C27.3966 28.65 26.6526 29.1471 25.8337 29.4863C25.0149 29.8254 24.1373 30 23.251 30ZM28.046 23.251V6.75C28.0459 5.47713 27.5402 4.25644 26.6401 3.35639C25.7401 2.45634 24.5194 1.95063 23.2465 1.9505H6.75C5.47705 1.95063 4.25628 2.4564 3.35621 3.35656C2.45614 4.25672 1.9505 5.47755 1.9505 6.7505V23.2505C1.95156 24.5228 2.45774 25.7427 3.3578 26.642C4.25786 27.5413 5.47815 28.0465 6.7505 28.0465H23.2505C24.522 28.0453 25.7411 27.5397 26.6403 26.6406C27.5394 25.7416 28.0447 24.5225 28.046 23.251Z\" fill=\"#25303B\"/></g><defs><clipPath id=\"clip0_271_3223\"><rect width=\"30\" height=\"30\" fill=\"white\"/></clipPath></defs></svg>",
+            "numberShapeSvg": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" rx=\"7.15\" ry=\"7.15\" height=\"32\" width=\"32\" fill=\"#5091cb\"/><text x=\"16\" y=\"23\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial Rounded MT Bold, Arial, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\">B</text></svg>",
+            "replacementColors": {
+                "dark": {
+                    "#25303B": "#FFFFFF"
+                },
+                "onVehicle": {
+                    "transparent": "#FFFFFF"
+                },
+                "onVehicleDark": {
+                    "transparent": "#000000"
+                }
+            },
+            "carriageIllustration": "https://transportsapp-cdn-1.arno.cl/fr-idf/RERBC.png",
+            "hideDelays": true,
+            "hideCancelledDepartures": true
+        },
+        "stops": [
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:427230",
+                    "name": "Robinson",
+                    "averagePosition": [
+                        48.780239827922024,
+                        2.2813647696696084
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43186",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:21:00.000Z",
+                    "realTime": "2026-09-05T19:21:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:21:00.000Z",
+                    "realTime": "2026-09-05T19:21:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:70133",
+                    "name": "Fontenay-aux-Roses",
+                    "averagePosition": [
+                        48.78756698215643,
+                        2.2929083820455327
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43125",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:23:00.000Z",
+                    "realTime": "2026-09-05T19:23:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:23:00.000Z",
+                    "realTime": "2026-09-05T19:23:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:74265",
+                    "name": "Sceaux",
+                    "averagePosition": [
+                        48.781307920937515,
+                        2.297928215943931
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:59206",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:24:00.000Z",
+                    "realTime": "2026-09-05T19:24:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:25:00.000Z",
+                    "realTime": "2026-09-05T19:25:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:70033",
+                    "name": "Bourg-la-Reine",
+                    "averagePosition": [
+                        48.78026436884243,
+                        2.312278311834308
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43097",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:26:00.000Z",
+                    "realTime": "2026-09-05T19:26:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:27:00.000Z",
+                    "realTime": "2026-09-05T19:27:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:70210",
+                    "name": "Bagneux",
+                    "averagePosition": [
+                        48.793336906271506,
+                        2.3220087047421583
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:44493",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:29:00.000Z",
+                    "realTime": "2026-09-05T19:29:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:29:00.000Z",
+                    "realTime": "2026-09-05T19:29:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:70263",
+                    "name": "Arcueil - Cachan",
+                    "averagePosition": [
+                        48.79869767228883,
+                        2.3280932761312774
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43067",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:30:00.000Z",
+                    "realTime": "2026-09-05T19:30:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:31:00.000Z",
+                    "realTime": "2026-09-05T19:31:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:70427",
+                    "name": "Laplace",
+                    "averagePosition": [
+                        48.808360137202826,
+                        2.334344015870189
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43607",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:32:00.000Z",
+                    "realTime": "2026-09-05T19:32:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:33:00.000Z",
+                    "realTime": "2026-09-05T19:33:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:70543",
+                    "name": "Gentilly",
+                    "averagePosition": [
+                        48.81522809261133,
+                        2.340926830790754
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:45877",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:34:00.000Z",
+                    "realTime": "2026-09-05T19:34:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:35:00.000Z",
+                    "realTime": "2026-09-05T19:35:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:70623",
+                    "name": "Cité Universitaire",
+                    "averagePosition": [
+                        48.82150600684165,
+                        2.338857680977703
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:473843",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:36:00.000Z",
+                    "realTime": "2026-09-05T19:36:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:36:00.000Z",
+                    "realTime": "2026-09-05T19:36:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:71056",
+                    "name": "Denfert-Rochereau",
+                    "averagePosition": [
+                        48.83318643678081,
+                        2.333220634641387
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:473890",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:38:00.000Z",
+                    "realTime": "2026-09-05T19:38:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:39:00.000Z",
+                    "realTime": "2026-09-05T19:39:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:71106",
+                    "name": "Port Royal",
+                    "averagePosition": [
+                        48.84006435021824,
+                        2.337138399594448
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:44500",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:40:00.000Z",
+                    "realTime": "2026-09-05T19:40:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:41:00.000Z",
+                    "realTime": "2026-09-05T19:41:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:71161",
+                    "name": "Luxembourg",
+                    "averagePosition": [
+                        48.845431778424576,
+                        2.3398088878203693
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43833",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:42:00.000Z",
+                    "realTime": "2026-09-05T19:42:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:42:00.000Z",
+                    "realTime": "2026-09-05T19:42:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:73620",
+                    "name": "Saint-Michel Notre-Dame",
+                    "averagePosition": [
+                        48.85302379374015,
+                        2.344959780029387
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:44877",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:44:00.000Z",
+                    "realTime": "2026-09-05T19:44:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:45:00.000Z",
+                    "realTime": "2026-09-05T19:45:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:474151",
+                    "name": "Châtelet - Les Halles",
+                    "averagePosition": [
+                        48.861745031913216,
+                        2.34697651043533
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:45102",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:46:00.000Z",
+                    "realTime": "2026-09-05T19:58:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:47:00.000Z",
+                    "realTime": "2026-09-05T19:58:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:71410",
+                    "name": "Gare du Nord",
+                    "averagePosition": [
+                        48.88230685842714,
+                        2.356693437528563
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:462394",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:50:00.000Z",
+                    "realTime": "2026-09-05T20:02:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:51:00.000Z",
+                    "realTime": "2026-09-05T20:03:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:72211",
+                    "name": "La Plaine Stade de France",
+                    "averagePosition": [
+                        48.918076675620995,
+                        2.3624599166049305
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43145",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:55:00.000Z",
+                    "realTime": "2026-09-05T20:07:00.000Z",
+                    "canceled": false
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:56:00.000Z",
+                    "realTime": "2026-09-05T20:07:00.000Z",
+                    "canceled": false
+                },
+                "isSkipped": false,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:72598",
+                    "name": "La Courneuve - Aubervilliers",
+                    "averagePosition": [
+                        48.924297432039104,
+                        2.386114057094948
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43140",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T19:58:00.000Z",
+                    "realTime": "2026-09-05T20:09:00.000Z",
+                    "canceled": true
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T19:58:00.000Z",
+                    "realTime": "2026-09-05T20:09:00.000Z",
+                    "canceled": true
+                },
+                "isSkipped": true,
+                "isClosed": true
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:72641",
+                    "name": "Le Bourget",
+                    "averagePosition": [
+                        48.930744340383264,
+                        2.4258256378150977
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43231",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T20:01:00.000Z",
+                    "realTime": "2026-09-05T20:12:00.000Z",
+                    "canceled": true
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T20:01:00.000Z",
+                    "realTime": "2026-09-05T20:12:00.000Z",
+                    "canceled": true
+                },
+                "isSkipped": true,
+                "isClosed": true
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:72652",
+                    "name": "Drancy",
+                    "averagePosition": [
+                        48.93273255395914,
+                        2.454883180745302
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43122",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T20:04:00.000Z",
+                    "realTime": "2026-09-05T20:15:00.000Z",
+                    "canceled": true
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T20:04:00.000Z",
+                    "realTime": "2026-09-05T20:15:00.000Z",
+                    "canceled": true
+                },
+                "isSkipped": true,
+                "isClosed": true
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:72648",
+                    "name": "Le Blanc-Mesnil",
+                    "averagePosition": [
+                        48.932306982209454,
+                        2.4753884360764293
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:46163",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T20:06:00.000Z",
+                    "realTime": "2026-09-05T20:17:00.000Z",
+                    "canceled": true
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T20:06:00.000Z",
+                    "realTime": "2026-09-05T20:17:00.000Z",
+                    "canceled": true
+                },
+                "isSkipped": true,
+                "isClosed": true
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:72646",
+                    "name": "Aulnay-sous-Bois",
+                    "averagePosition": [
+                        48.93215093573407,
+                        2.495597257086316
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43071",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T20:08:00.000Z",
+                    "realTime": "2026-09-05T20:19:00.000Z",
+                    "canceled": true
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T20:09:00.000Z",
+                    "realTime": "2026-09-05T20:20:00.000Z",
+                    "canceled": true
+                },
+                "isSkipped": true,
+                "isClosed": true
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:73439",
+                    "name": "Sevran - Livry",
+                    "averagePosition": [
+                        48.93640164880271,
+                        2.535288992729144
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43194",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T20:12:00.000Z",
+                    "realTime": "2026-09-05T20:23:00.000Z",
+                    "canceled": true
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T20:12:00.000Z",
+                    "realTime": "2026-09-05T20:23:00.000Z",
+                    "canceled": true
+                },
+                "isSkipped": true,
+                "isClosed": true
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:73482",
+                    "name": "Vert Galant",
+                    "averagePosition": [
+                        48.9440916454181,
+                        2.566396880698313
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:46222",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T20:15:00.000Z",
+                    "realTime": "2026-09-05T20:26:00.000Z",
+                    "canceled": true
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T20:15:00.000Z",
+                    "realTime": "2026-09-05T20:26:00.000Z",
+                    "canceled": true
+                },
+                "isSkipped": true,
+                "isClosed": false
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:68916",
+                    "name": "Villeparisis - Mitry-le-Neuf",
+                    "averagePosition": [
+                        48.95316214687085,
+                        2.6032205615327495
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:46725",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T20:18:00.000Z",
+                    "realTime": "2026-09-05T20:29:00.000Z",
+                    "canceled": true
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T20:18:00.000Z",
+                    "realTime": "2026-09-05T20:29:00.000Z",
+                    "canceled": true
+                },
+                "isSkipped": true,
+                "isClosed": true
+            },
+            {
+                "stop": {
+                    "id": "fr-idf_IDFM:69065",
+                    "name": "Mitry - Claye",
+                    "averagePosition": [
+                        48.97574795080659,
+                        2.64223413697366
+                    ],
+                    "stops": [
+                        {
+                            "id": "fr-idf_IDFM:monomodalStopPlace:43164",
+                            "lines": []
+                        }
+                    ]
+                },
+                "arrivesAt": {
+                    "theoretical": "2026-09-05T20:22:00.000Z",
+                    "realTime": "2026-09-05T20:33:00.000Z",
+                    "canceled": true
+                },
+                "leavesAt": {
+                    "theoretical": "2026-09-05T20:22:00.000Z",
+                    "realTime": "2026-09-05T20:33:00.000Z",
+                    "canceled": true
+                },
+                "isSkipped": true,
+                "isClosed": false
+            }
+        ],
+        "journeyCode": "ILOU95",
+        "journeyId": "20260905_21:21_fr-idf_IDFM:TN:SNCF:9d9d20a4-7012-4c7a-a13c-ffe6f3a7db9f",
+        "shape": {
+            "multilineString": {
+                "type": "MultiLineString",
+                "coordinates": [
+                    [
+                        [
+                            48.78024,
+                            2.281365
+                        ],
+                        [
+                            48.780083,
+                            2.281281
+                        ],
+                        [
+                            48.780514,
+                            2.281586
+                        ],
+                        [
+                            48.78072,
+                            2.28172
+                        ],
+                        [
+                            48.781044,
+                            2.281907
+                        ],
+                        [
+                            48.7812,
+                            2.281989
+                        ],
+                        [
+                            48.781902,
+                            2.2823
+                        ],
+                        [
+                            48.782413,
+                            2.282537
+                        ],
+                        [
+                            48.782703,
+                            2.282682
+                        ],
+                        [
+                            48.782822,
+                            2.282754
+                        ],
+                        [
+                            48.783047,
+                            2.282913
+                        ],
+                        [
+                            48.783154,
+                            2.283006
+                        ],
+                        [
+                            48.783257,
+                            2.283101
+                        ],
+                        [
+                            48.783421,
+                            2.283272
+                        ],
+                        [
+                            48.783611,
+                            2.283513
+                        ],
+                        [
+                            48.783779,
+                            2.283769
+                        ],
+                        [
+                            48.783936,
+                            2.284049
+                        ],
+                        [
+                            48.784004,
+                            2.284194
+                        ],
+                        [
+                            48.784134,
+                            2.284512
+                        ],
+                        [
+                            48.784229,
+                            2.284777
+                        ],
+                        [
+                            48.784294,
+                            2.285006
+                        ],
+                        [
+                            48.784374,
+                            2.285348
+                        ],
+                        [
+                            48.78463,
+                            2.286512
+                        ],
+                        [
+                            48.784718,
+                            2.286871
+                        ],
+                        [
+                            48.784843,
+                            2.287269
+                        ],
+                        [
+                            48.784943,
+                            2.28751
+                        ],
+                        [
+                            48.785046,
+                            2.287731
+                        ],
+                        [
+                            48.785118,
+                            2.28786
+                        ],
+                        [
+                            48.785301,
+                            2.288144
+                        ],
+                        [
+                            48.7854,
+                            2.288275
+                        ],
+                        [
+                            48.785553,
+                            2.288442
+                        ],
+                        [
+                            48.785789,
+                            2.288665
+                        ],
+                        [
+                            48.786465,
+                            2.289245
+                        ],
+                        [
+                            48.786747,
+                            2.289532
+                        ],
+                        [
+                            48.786884,
+                            2.289697
+                        ],
+                        [
+                            48.787029,
+                            2.289916
+                        ],
+                        [
+                            48.787186,
+                            2.290193
+                        ],
+                        [
+                            48.787289,
+                            2.290424
+                        ],
+                        [
+                            48.787403,
+                            2.290724
+                        ],
+                        [
+                            48.787453,
+                            2.290883
+                        ],
+                        [
+                            48.787556,
+                            2.291332
+                        ],
+                        [
+                            48.787594,
+                            2.29156
+                        ],
+                        [
+                            48.787624,
+                            2.291864
+                        ],
+                        [
+                            48.787636,
+                            2.292032
+                        ],
+                        [
+                            48.78764,
+                            2.292342
+                        ],
+                        [
+                            48.787636,
+                            2.292533
+                        ],
+                        [
+                            48.787601,
+                            2.292913
+                        ],
+                        [
+                            48.787567,
+                            2.293134
+                        ],
+                        [
+                            48.787498,
+                            2.293444
+                        ],
+                        [
+                            48.787445,
+                            2.293654
+                        ],
+                        [
+                            48.787384,
+                            2.293858
+                        ],
+                        [
+                            48.787296,
+                            2.294089
+                        ],
+                        [
+                            48.787216,
+                            2.294264
+                        ],
+                        [
+                            48.787117,
+                            2.294458
+                        ],
+                        [
+                            48.786972,
+                            2.294699
+                        ],
+                        [
+                            48.78677,
+                            2.29496
+                        ],
+                        [
+                            48.786652,
+                            2.295089
+                        ],
+                        [
+                            48.786476,
+                            2.295252
+                        ],
+                        [
+                            48.786251,
+                            2.295423
+                        ],
+                        [
+                            48.786137,
+                            2.29549
+                        ],
+                        [
+                            48.785992,
+                            2.295561
+                        ],
+                        [
+                            48.785725,
+                            2.295644
+                        ],
+                        [
+                            48.785561,
+                            2.295673
+                        ],
+                        [
+                            48.785442,
+                            2.295685
+                        ],
+                        [
+                            48.785271,
+                            2.295682
+                        ],
+                        [
+                            48.785053,
+                            2.295655
+                        ],
+                        [
+                            48.78437,
+                            2.295509
+                        ],
+                        [
+                            48.784073,
+                            2.295457
+                        ],
+                        [
+                            48.783806,
+                            2.295436
+                        ],
+                        [
+                            48.783596,
+                            2.295444
+                        ],
+                        [
+                            48.783337,
+                            2.29548
+                        ],
+                        [
+                            48.783054,
+                            2.295562
+                        ],
+                        [
+                            48.78281,
+                            2.295679
+                        ],
+                        [
+                            48.782509,
+                            2.295881
+                        ],
+                        [
+                            48.782387,
+                            2.295982
+                        ],
+                        [
+                            48.782223,
+                            2.29614
+                        ],
+                        [
+                            48.78212,
+                            2.296252
+                        ],
+                        [
+                            48.781948,
+                            2.296473
+                        ],
+                        [
+                            48.781704,
+                            2.296885
+                        ],
+                        [
+                            48.78154,
+                            2.297233
+                        ],
+                        [
+                            48.781406,
+                            2.297606
+                        ],
+                        [
+                            48.781311,
+                            2.29793
+                        ],
+                        [
+                            48.781265,
+                            2.298103
+                        ],
+                        [
+                            48.781128,
+                            2.298709
+                        ],
+                        [
+                            48.780991,
+                            2.299364
+                        ],
+                        [
+                            48.779293,
+                            2.307635
+                        ],
+                        [
+                            48.779175,
+                            2.308228
+                        ],
+                        [
+                            48.779125,
+                            2.308546
+                        ],
+                        [
+                            48.779095,
+                            2.308998
+                        ],
+                        [
+                            48.779087,
+                            2.309283
+                        ],
+                        [
+                            48.77911,
+                            2.309609
+                        ],
+                        [
+                            48.779179,
+                            2.310108
+                        ],
+                        [
+                            48.779289,
+                            2.310535
+                        ],
+                        [
+                            48.77935,
+                            2.310715
+                        ],
+                        [
+                            48.779469,
+                            2.310997
+                        ],
+                        [
+                            48.779636,
+                            2.311297
+                        ],
+                        [
+                            48.779724,
+                            2.31144
+                        ],
+                        [
+                            48.779911,
+                            2.311694
+                        ],
+                        [
+                            48.780006,
+                            2.311803
+                        ],
+                        [
+                            48.780239,
+                            2.312037
+                        ],
+                        [
+                            48.78051,
+                            2.31222
+                        ],
+                        [
+                            48.780716,
+                            2.312328
+                        ],
+                        [
+                            48.780834,
+                            2.312379
+                        ],
+                        [
+                            48.780956,
+                            2.312411
+                        ],
+                        [
+                            48.781082,
+                            2.312425
+                        ],
+                        [
+                            48.781197,
+                            2.312437
+                        ],
+                        [
+                            48.781376,
+                            2.312437
+                        ],
+                        [
+                            48.781544,
+                            2.312419
+                        ],
+                        [
+                            48.781799,
+                            2.312371
+                        ],
+                        [
+                            48.782013,
+                            2.312317
+                        ],
+                        [
+                            48.782555,
+                            2.312196
+                        ],
+                        [
+                            48.78281,
+                            2.312156
+                        ],
+                        [
+                            48.783043,
+                            2.312148
+                        ],
+                        [
+                            48.783409,
+                            2.312185
+                        ],
+                        [
+                            48.783649,
+                            2.312242
+                        ],
+                        [
+                            48.783886,
+                            2.31233
+                        ],
+                        [
+                            48.784294,
+                            2.312514
+                        ],
+                        [
+                            48.784992,
+                            2.312865
+                        ],
+                        [
+                            48.78598,
+                            2.313389
+                        ],
+                        [
+                            48.786442,
+                            2.313656
+                        ],
+                        [
+                            48.787491,
+                            2.314302
+                        ],
+                        [
+                            48.78801,
+                            2.314646
+                        ],
+                        [
+                            48.790207,
+                            2.316173
+                        ],
+                        [
+                            48.790955,
+                            2.316649
+                        ],
+                        [
+                            48.791584,
+                            2.317039
+                        ],
+                        [
+                            48.79184,
+                            2.31723
+                        ],
+                        [
+                            48.792053,
+                            2.317417
+                        ],
+                        [
+                            48.792248,
+                            2.317636
+                        ],
+                        [
+                            48.792435,
+                            2.317883
+                        ],
+                        [
+                            48.792568,
+                            2.3181
+                        ],
+                        [
+                            48.792675,
+                            2.318292
+                        ],
+                        [
+                            48.792839,
+                            2.318646
+                        ],
+                        [
+                            48.792908,
+                            2.318822
+                        ],
+                        [
+                            48.792973,
+                            2.319027
+                        ],
+                        [
+                            48.793087,
+                            2.319441
+                        ],
+                        [
+                            48.793156,
+                            2.319769
+                        ],
+                        [
+                            48.793186,
+                            2.319948
+                        ],
+                        [
+                            48.793247,
+                            2.320479
+                        ],
+                        [
+                            48.793339,
+                            2.322009
+                        ],
+                        [
+                            48.793377,
+                            2.322473
+                        ],
+                        [
+                            48.793404,
+                            2.322702
+                        ],
+                        [
+                            48.793545,
+                            2.323536
+                        ],
+                        [
+                            48.793659,
+                            2.324031
+                        ],
+                        [
+                            48.793793,
+                            2.324487
+                        ],
+                        [
+                            48.79388,
+                            2.324752
+                        ],
+                        [
+                            48.793957,
+                            2.324963
+                        ],
+                        [
+                            48.794144,
+                            2.325375
+                        ],
+                        [
+                            48.794239,
+                            2.325573
+                        ],
+                        [
+                            48.794441,
+                            2.325922
+                        ],
+                        [
+                            48.794678,
+                            2.326257
+                        ],
+                        [
+                            48.7948,
+                            2.326408
+                        ],
+                        [
+                            48.79493,
+                            2.326556
+                        ],
+                        [
+                            48.795197,
+                            2.326825
+                        ],
+                        [
+                            48.795483,
+                            2.32707
+                        ],
+                        [
+                            48.795776,
+                            2.327278
+                        ],
+                        [
+                            48.796055,
+                            2.327433
+                        ],
+                        [
+                            48.796352,
+                            2.32756
+                        ],
+                        [
+                            48.7967,
+                            2.327683
+                        ],
+                        [
+                            48.796955,
+                            2.327754
+                        ],
+                        [
+                            48.797604,
+                            2.327885
+                        ],
+                        [
+                            48.799618,
+                            2.328247
+                        ],
+                        [
+                            48.803185,
+                            2.328896
+                        ],
+                        [
+                            48.803478,
+                            2.328984
+                        ],
+                        [
+                            48.803711,
+                            2.329075
+                        ],
+                        [
+                            48.803917,
+                            2.329177
+                        ],
+                        [
+                            48.804111,
+                            2.329293
+                        ],
+                        [
+                            48.804394,
+                            2.329495
+                        ],
+                        [
+                            48.804535,
+                            2.329608
+                        ],
+                        [
+                            48.804756,
+                            2.329806
+                        ],
+                        [
+                            48.805172,
+                            2.330216
+                        ],
+                        [
+                            48.8055,
+                            2.330575
+                        ],
+                        [
+                            48.805664,
+                            2.330764
+                        ],
+                        [
+                            48.805973,
+                            2.331168
+                        ],
+                        [
+                            48.806286,
+                            2.33161
+                        ],
+                        [
+                            48.806717,
+                            2.332166
+                        ],
+                        [
+                            48.807575,
+                            2.33318
+                        ],
+                        [
+                            48.807953,
+                            2.333671
+                        ],
+                        [
+                            48.808414,
+                            2.334306
+                        ],
+                        [
+                            48.808746,
+                            2.334743
+                        ],
+                        [
+                            48.809643,
+                            2.335964
+                        ],
+                        [
+                            48.810452,
+                            2.337156
+                        ],
+                        [
+                            48.811531,
+                            2.338625
+                        ],
+                        [
+                            48.811897,
+                            2.3391
+                        ],
+                        [
+                            48.812275,
+                            2.33954
+                        ],
+                        [
+                            48.812447,
+                            2.339722
+                        ],
+                        [
+                            48.812614,
+                            2.339885
+                        ],
+                        [
+                            48.812943,
+                            2.340189
+                        ],
+                        [
+                            48.813202,
+                            2.340395
+                        ],
+                        [
+                            48.813362,
+                            2.340509
+                        ],
+                        [
+                            48.813652,
+                            2.340672
+                        ],
+                        [
+                            48.813766,
+                            2.340727
+                        ],
+                        [
+                            48.814083,
+                            2.34084
+                        ],
+                        [
+                            48.81427,
+                            2.340888
+                        ],
+                        [
+                            48.814468,
+                            2.340925
+                        ],
+                        [
+                            48.814617,
+                            2.340939
+                        ],
+                        [
+                            48.81485,
+                            2.340936
+                        ],
+                        [
+                            48.815079,
+                            2.340909
+                        ],
+                        [
+                            48.815372,
+                            2.340836
+                        ],
+                        [
+                            48.815609,
+                            2.340758
+                        ],
+                        [
+                            48.815777,
+                            2.340696
+                        ],
+                        [
+                            48.816074,
+                            2.340574
+                        ],
+                        [
+                            48.816456,
+                            2.340406
+                        ],
+                        [
+                            48.816776,
+                            2.340247
+                        ],
+                        [
+                            48.817055,
+                            2.340079
+                        ],
+                        [
+                            48.81768,
+                            2.339637
+                        ],
+                        [
+                            48.817913,
+                            2.339461
+                        ],
+                        [
+                            48.818394,
+                            2.339136
+                        ],
+                        [
+                            48.818748,
+                            2.338968
+                        ],
+                        [
+                            48.818886,
+                            2.338939
+                        ],
+                        [
+                            48.819267,
+                            2.33894
+                        ],
+                        [
+                            48.819504,
+                            2.338933
+                        ],
+                        [
+                            48.819748,
+                            2.338935
+                        ],
+                        [
+                            48.820583,
+                            2.338981
+                        ],
+                        [
+                            48.820747,
+                            2.338976
+                        ],
+                        [
+                            48.821014,
+                            2.338955
+                        ],
+                        [
+                            48.821209,
+                            2.338928
+                        ],
+                        [
+                            48.821396,
+                            2.338864
+                        ],
+                        [
+                            48.821491,
+                            2.338822
+                        ],
+                        [
+                            48.821648,
+                            2.338751
+                        ],
+                        [
+                            48.821941,
+                            2.338565
+                        ],
+                        [
+                            48.822567,
+                            2.338114
+                        ],
+                        [
+                            48.822819,
+                            2.337949
+                        ],
+                        [
+                            48.8232,
+                            2.337751
+                        ],
+                        [
+                            48.823341,
+                            2.337695
+                        ],
+                        [
+                            48.82349,
+                            2.337639
+                        ],
+                        [
+                            48.824139,
+                            2.337437
+                        ],
+                        [
+                            48.824455,
+                            2.337316
+                        ],
+                        [
+                            48.824898,
+                            2.337126
+                        ],
+                        [
+                            48.82518,
+                            2.337016
+                        ],
+                        [
+                            48.828369,
+                            2.336005
+                        ],
+                        [
+                            48.828918,
+                            2.33582
+                        ],
+                        [
+                            48.829571,
+                            2.335572
+                        ],
+                        [
+                            48.829765,
+                            2.33546
+                        ],
+                        [
+                            48.829987,
+                            2.33529
+                        ],
+                        [
+                            48.83009,
+                            2.335186
+                        ],
+                        [
+                            48.830284,
+                            2.334971
+                        ],
+                        [
+                            48.830482,
+                            2.334729
+                        ],
+                        [
+                            48.830627,
+                            2.334569
+                        ],
+                        [
+                            48.831112,
+                            2.334053
+                        ],
+                        [
+                            48.831333,
+                            2.333869
+                        ],
+                        [
+                            48.831558,
+                            2.33372
+                        ],
+                        [
+                            48.831806,
+                            2.333599
+                        ],
+                        [
+                            48.831959,
+                            2.333541
+                        ],
+                        [
+                            48.832947,
+                            2.333219
+                        ],
+                        [
+                            48.833691,
+                            2.332938
+                        ],
+                        [
+                            48.833931,
+                            2.332862
+                        ],
+                        [
+                            48.834141,
+                            2.332811
+                        ],
+                        [
+                            48.834305,
+                            2.3328
+                        ],
+                        [
+                            48.834488,
+                            2.332809
+                        ],
+                        [
+                            48.83461,
+                            2.332833
+                        ],
+                        [
+                            48.834824,
+                            2.332902
+                        ],
+                        [
+                            48.835049,
+                            2.333007
+                        ],
+                        [
+                            48.835373,
+                            2.333261
+                        ],
+                        [
+                            48.836319,
+                            2.334112
+                        ],
+                        [
+                            48.83728,
+                            2.335093
+                        ],
+                        [
+                            48.8382,
+                            2.336043
+                        ],
+                        [
+                            48.838524,
+                            2.336333
+                        ],
+                        [
+                            48.838703,
+                            2.336466
+                        ],
+                        [
+                            48.839104,
+                            2.336689
+                        ],
+                        [
+                            48.839931,
+                            2.337032
+                        ],
+                        [
+                            48.840813,
+                            2.337292
+                        ],
+                        [
+                            48.841061,
+                            2.337386
+                        ],
+                        [
+                            48.842209,
+                            2.337952
+                        ],
+                        [
+                            48.844456,
+                            2.339237
+                        ],
+                        [
+                            48.845451,
+                            2.339772
+                        ],
+                        [
+                            48.846497,
+                            2.340333
+                        ],
+                        [
+                            48.846954,
+                            2.340566
+                        ],
+                        [
+                            48.849747,
+                            2.342259
+                        ],
+                        [
+                            48.851135,
+                            2.342938
+                        ],
+                        [
+                            48.851437,
+                            2.343132
+                        ],
+                        [
+                            48.851719,
+                            2.343379
+                        ],
+                        [
+                            48.851978,
+                            2.343676
+                        ],
+                        [
+                            48.852211,
+                            2.344018
+                        ],
+                        [
+                            48.853233,
+                            2.345691
+                        ],
+                        [
+                            48.853699,
+                            2.346454
+                        ],
+                        [
+                            48.853832,
+                            2.346657
+                        ],
+                        [
+                            48.853973,
+                            2.346849
+                        ],
+                        [
+                            48.854118,
+                            2.34703
+                        ],
+                        [
+                            48.854271,
+                            2.347199
+                        ],
+                        [
+                            48.854427,
+                            2.347356
+                        ],
+                        [
+                            48.854591,
+                            2.347499
+                        ],
+                        [
+                            48.854755,
+                            2.34763
+                        ],
+                        [
+                            48.854927,
+                            2.347747
+                        ],
+                        [
+                            48.855282,
+                            2.34794
+                        ],
+                        [
+                            48.856155,
+                            2.348341
+                        ],
+                        [
+                            48.856476,
+                            2.34844
+                        ],
+                        [
+                            48.8568,
+                            2.34848
+                        ],
+                        [
+                            48.857124,
+                            2.34846
+                        ],
+                        [
+                            48.857445,
+                            2.348381
+                        ],
+                        [
+                            48.859177,
+                            2.347797
+                        ],
+                        [
+                            48.860241,
+                            2.34748
+                        ],
+                        [
+                            48.861744,
+                            2.346844
+                        ],
+                        [
+                            48.862778,
+                            2.346407
+                        ],
+                        [
+                            48.864326,
+                            2.345791
+                        ],
+                        [
+                            48.865032,
+                            2.345611
+                        ],
+                        [
+                            48.865997,
+                            2.345424
+                        ],
+                        [
+                            48.866467,
+                            2.345354
+                        ],
+                        [
+                            48.866928,
+                            2.345316
+                        ],
+                        [
+                            48.867405,
+                            2.34534
+                        ],
+                        [
+                            48.867733,
+                            2.345384
+                        ],
+                        [
+                            48.868252,
+                            2.34549
+                        ],
+                        [
+                            48.868637,
+                            2.345605
+                        ],
+                        [
+                            48.868961,
+                            2.345732
+                        ],
+                        [
+                            48.869308,
+                            2.3459
+                        ],
+                        [
+                            48.869686,
+                            2.346119
+                        ],
+                        [
+                            48.87487,
+                            2.349779
+                        ],
+                        [
+                            48.875206,
+                            2.350053
+                        ],
+                        [
+                            48.875519,
+                            2.350375
+                        ],
+                        [
+                            48.875778,
+                            2.350719
+                        ],
+                        [
+                            48.876053,
+                            2.351152
+                        ],
+                        [
+                            48.877434,
+                            2.35358
+                        ],
+                        [
+                            48.877846,
+                            2.354201
+                        ],
+                        [
+                            48.878311,
+                            2.354758
+                        ],
+                        [
+                            48.879681,
+                            2.356179
+                        ],
+                        [
+                            48.879993,
+                            2.35653
+                        ],
+                        [
+                            48.880215,
+                            2.356734
+                        ],
+                        [
+                            48.88055,
+                            2.356979
+                        ],
+                        [
+                            48.880676,
+                            2.357055
+                        ],
+                        [
+                            48.880882,
+                            2.357161
+                        ],
+                        [
+                            48.881405,
+                            2.357404
+                        ],
+                        [
+                            48.881977,
+                            2.357659
+                        ],
+                        [
+                            48.882244,
+                            2.357756
+                        ],
+                        [
+                            48.882492,
+                            2.357827
+                        ],
+                        [
+                            48.882751,
+                            2.357882
+                        ],
+                        [
+                            48.882938,
+                            2.357908
+                        ],
+                        [
+                            48.883121,
+                            2.357925
+                        ],
+                        [
+                            48.883568,
+                            2.357941
+                        ],
+                        [
+                            48.885208,
+                            2.357942
+                        ],
+                        [
+                            48.886402,
+                            2.357929
+                        ],
+                        [
+                            48.887524,
+                            2.357854
+                        ],
+                        [
+                            48.88834,
+                            2.357781
+                        ],
+                        [
+                            48.889816,
+                            2.357557
+                        ],
+                        [
+                            48.890144,
+                            2.357486
+                        ],
+                        [
+                            48.890472,
+                            2.357395
+                        ],
+                        [
+                            48.890755,
+                            2.357292
+                        ],
+                        [
+                            48.891155,
+                            2.357122
+                        ],
+                        [
+                            48.894276,
+                            2.35563
+                        ],
+                        [
+                            48.894806,
+                            2.355417
+                        ],
+                        [
+                            48.896339,
+                            2.354898
+                        ],
+                        [
+                            48.896965,
+                            2.35472
+                        ],
+                        [
+                            48.897404,
+                            2.354626
+                        ],
+                        [
+                            48.897556,
+                            2.354602
+                        ],
+                        [
+                            48.897942,
+                            2.354564
+                        ],
+                        [
+                            48.899231,
+                            2.354511
+                        ],
+                        [
+                            48.899654,
+                            2.354477
+                        ],
+                        [
+                            48.899857,
+                            2.35445
+                        ],
+                        [
+                            48.90012,
+                            2.354402
+                        ],
+                        [
+                            48.901302,
+                            2.354136
+                        ],
+                        [
+                            48.901924,
+                            2.353956
+                        ],
+                        [
+                            48.903095,
+                            2.353571
+                        ],
+                        [
+                            48.903629,
+                            2.353424
+                        ],
+                        [
+                            48.903934,
+                            2.353362
+                        ],
+                        [
+                            48.905991,
+                            2.353057
+                        ],
+                        [
+                            48.907253,
+                            2.352908
+                        ],
+                        [
+                            48.907524,
+                            2.352865
+                        ],
+                        [
+                            48.907967,
+                            2.352775
+                        ],
+                        [
+                            48.908501,
+                            2.352631
+                        ],
+                        [
+                            48.909447,
+                            2.352323
+                        ],
+                        [
+                            48.909637,
+                            2.352266
+                        ],
+                        [
+                            48.909859,
+                            2.352213
+                        ],
+                        [
+                            48.910118,
+                            2.35217
+                        ],
+                        [
+                            48.910454,
+                            2.352142
+                        ],
+                        [
+                            48.910778,
+                            2.352153
+                        ],
+                        [
+                            48.911053,
+                            2.352193
+                        ],
+                        [
+                            48.911293,
+                            2.352249
+                        ],
+                        [
+                            48.911427,
+                            2.352292
+                        ],
+                        [
+                            48.911667,
+                            2.35239
+                        ],
+                        [
+                            48.911892,
+                            2.352496
+                        ],
+                        [
+                            48.912144,
+                            2.35265
+                        ],
+                        [
+                            48.912399,
+                            2.352837
+                        ],
+                        [
+                            48.912704,
+                            2.353103
+                        ],
+                        [
+                            48.912807,
+                            2.353205
+                        ],
+                        [
+                            48.912991,
+                            2.353401
+                        ],
+                        [
+                            48.913246,
+                            2.353728
+                        ],
+                        [
+                            48.913456,
+                            2.354033
+                        ],
+                        [
+                            48.913567,
+                            2.35421
+                        ],
+                        [
+                            48.914017,
+                            2.354978
+                        ],
+                        [
+                            48.916004,
+                            2.358593
+                        ],
+                        [
+                            48.91671,
+                            2.359904
+                        ],
+                        [
+                            48.916992,
+                            2.360401
+                        ],
+                        [
+                            48.917259,
+                            2.360841
+                        ],
+                        [
+                            48.918018,
+                            2.362019
+                        ],
+                        [
+                            48.918236,
+                            2.362402
+                        ],
+                        [
+                            48.918564,
+                            2.363019
+                        ],
+                        [
+                            48.918751,
+                            2.363421
+                        ],
+                        [
+                            48.919006,
+                            2.363996
+                        ],
+                        [
+                            48.919304,
+                            2.364773
+                        ],
+                        [
+                            48.919521,
+                            2.365411
+                        ],
+                        [
+                            48.91964,
+                            2.365788
+                        ],
+                        [
+                            48.919884,
+                            2.366653
+                        ],
+                        [
+                            48.920822,
+                            2.370461
+                        ],
+                        [
+                            48.921177,
+                            2.371969
+                        ],
+                        [
+                            48.922958,
+                            2.379224
+                        ],
+                        [
+                            48.923405,
+                            2.381116
+                        ],
+                        [
+                            48.923721,
+                            2.382601
+                        ],
+                        [
+                            48.92403,
+                            2.384142
+                        ],
+                        [
+                            48.924374,
+                            2.386101
+                        ],
+                        [
+                            48.924622,
+                            2.387514
+                        ],
+                        [
+                            48.926136,
+                            2.397062
+                        ],
+                        [
+                            48.926609,
+                            2.400266
+                        ],
+                        [
+                            48.926769,
+                            2.401292
+                        ],
+                        [
+                            48.92907,
+                            2.415193
+                        ],
+                        [
+                            48.929241,
+                            2.416303
+                        ],
+                        [
+                            48.92979,
+                            2.41962
+                        ],
+                        [
+                            48.930744,
+                            2.425297
+                        ],
+                        [
+                            48.931358,
+                            2.428992
+                        ],
+                        [
+                            48.931843,
+                            2.431566
+                        ],
+                        [
+                            48.932274,
+                            2.434047
+                        ],
+                        [
+                            48.93243,
+                            2.435087
+                        ],
+                        [
+                            48.932541,
+                            2.43596
+                        ],
+                        [
+                            48.932671,
+                            2.437228
+                        ],
+                        [
+                            48.932701,
+                            2.437627
+                        ],
+                        [
+                            48.93277,
+                            2.43869
+                        ],
+                        [
+                            48.932796,
+                            2.439268
+                        ],
+                        [
+                            48.932816,
+                            2.440068
+                        ],
+                        [
+                            48.932823,
+                            2.440848
+                        ],
+                        [
+                            48.932755,
+                            2.447472
+                        ],
+                        [
+                            48.932755,
+                            2.448313
+                        ],
+                        [
+                            48.932796,
+                            2.452293
+                        ],
+                        [
+                            48.932762,
+                            2.455806
+                        ],
+                        [
+                            48.932755,
+                            2.456874
+                        ],
+                        [
+                            48.932632,
+                            2.463933
+                        ],
+                        [
+                            48.932472,
+                            2.468765
+                        ],
+                        [
+                            48.932419,
+                            2.470675
+                        ],
+                        [
+                            48.932407,
+                            2.472606
+                        ],
+                        [
+                            48.932407,
+                            2.476836
+                        ],
+                        [
+                            48.932404,
+                            2.477616
+                        ],
+                        [
+                            48.932384,
+                            2.47855
+                        ],
+                        [
+                            48.932304,
+                            2.480726
+                        ],
+                        [
+                            48.932167,
+                            2.49249
+                        ],
+                        [
+                            48.932178,
+                            2.493671
+                        ],
+                        [
+                            48.932236,
+                            2.496767
+                        ],
+                        [
+                            48.932247,
+                            2.500818
+                        ],
+                        [
+                            48.93224,
+                            2.502538
+                        ],
+                        [
+                            48.932217,
+                            2.505302
+                        ],
+                        [
+                            48.93222,
+                            2.505866
+                        ],
+                        [
+                            48.932259,
+                            2.507601
+                        ],
+                        [
+                            48.932262,
+                            2.50846
+                        ],
+                        [
+                            48.932243,
+                            2.50911
+                        ],
+                        [
+                            48.932213,
+                            2.509659
+                        ],
+                        [
+                            48.932049,
+                            2.511661
+                        ],
+                        [
+                            48.932007,
+                            2.512449
+                        ],
+                        [
+                            48.931919,
+                            2.515772
+                        ],
+                        [
+                            48.931923,
+                            2.516508
+                        ],
+                        [
+                            48.93195,
+                            2.517314
+                        ],
+                        [
+                            48.93198,
+                            2.517832
+                        ],
+                        [
+                            48.932007,
+                            2.518195
+                        ],
+                        [
+                            48.932095,
+                            2.519019
+                        ],
+                        [
+                            48.932205,
+                            2.519812
+                        ],
+                        [
+                            48.932316,
+                            2.520444
+                        ],
+                        [
+                            48.932495,
+                            2.521312
+                        ],
+                        [
+                            48.932693,
+                            2.522116
+                        ],
+                        [
+                            48.932892,
+                            2.522836
+                        ],
+                        [
+                            48.934982,
+                            2.530051
+                        ],
+                        [
+                            48.935215,
+                            2.530825
+                        ],
+                        [
+                            48.93602,
+                            2.533455
+                        ],
+                        [
+                            48.93626,
+                            2.534286
+                        ],
+                        [
+                            48.936459,
+                            2.535065
+                        ],
+                        [
+                            48.936749,
+                            2.536343
+                        ],
+                        [
+                            48.936863,
+                            2.536865
+                        ],
+                        [
+                            48.937103,
+                            2.537911
+                        ],
+                        [
+                            48.938404,
+                            2.543427
+                        ],
+                        [
+                            48.938606,
+                            2.544318
+                        ],
+                        [
+                            48.938885,
+                            2.545638
+                        ],
+                        [
+                            48.939159,
+                            2.546865
+                        ],
+                        [
+                            48.940029,
+                            2.550592
+                        ],
+                        [
+                            48.940228,
+                            2.55139
+                        ],
+                        [
+                            48.943485,
+                            2.56368
+                        ],
+                        [
+                            48.944389,
+                            2.566914
+                        ],
+                        [
+                            48.944576,
+                            2.567646
+                        ],
+                        [
+                            48.944935,
+                            2.569125
+                        ],
+                        [
+                            48.945099,
+                            2.569757
+                        ],
+                        [
+                            48.946102,
+                            2.573554
+                        ],
+                        [
+                            48.948917,
+                            2.584727
+                        ],
+                        [
+                            48.952362,
+                            2.599553
+                        ],
+                        [
+                            48.952881,
+                            2.601637
+                        ],
+                        [
+                            48.953514,
+                            2.604335
+                        ],
+                        [
+                            48.954697,
+                            2.609458
+                        ],
+                        [
+                            48.954845,
+                            2.610058
+                        ],
+                        [
+                            48.954952,
+                            2.61044
+                        ],
+                        [
+                            48.955151,
+                            2.611069
+                        ],
+                        [
+                            48.955353,
+                            2.61163
+                        ],
+                        [
+                            48.955479,
+                            2.611943
+                        ],
+                        [
+                            48.955681,
+                            2.612411
+                        ],
+                        [
+                            48.955803,
+                            2.612667
+                        ],
+                        [
+                            48.956116,
+                            2.613279
+                        ],
+                        [
+                            48.95649,
+                            2.613921
+                        ],
+                        [
+                            48.956791,
+                            2.614403
+                        ],
+                        [
+                            48.957092,
+                            2.614856
+                        ],
+                        [
+                            48.957443,
+                            2.615341
+                        ],
+                        [
+                            48.95834,
+                            2.616536
+                        ],
+                        [
+                            48.958828,
+                            2.617208
+                        ],
+                        [
+                            48.960068,
+                            2.618997
+                        ],
+                        [
+                            48.960705,
+                            2.619926
+                        ],
+                        [
+                            48.961304,
+                            2.620812
+                        ],
+                        [
+                            48.962563,
+                            2.622778
+                        ],
+                        [
+                            48.963173,
+                            2.623704
+                        ],
+                        [
+                            48.973682,
+                            2.639022
+                        ],
+                        [
+                            48.974209,
+                            2.639782
+                        ],
+                        [
+                            48.975201,
+                            2.641149
+                        ],
+                        [
+                            48.975956,
+                            2.642258
+                        ],
+                        [
+                            48.975748,
+                            2.642234
+                        ]
+                    ]
+                ]
+            }
+        },
+        "disruptions": [
+            {
+                "routeId": "fr-idf_IDFM:C01743",
+                "start": "2026-09-05T11:57:00.000Z",
+                "end": "2026-09-05T20:00:00.000Z",
+                "details": "",
+                "cause": "unknown",
+                "effect": "unknown",
+                "impactedStops": [],
+                "appliedToAllStops": false,
+                "hasReplacementBuses": false,
+                "diversionMode": "normalServiceWithSkippedStops",
+                "label": "Situation anormale"
+            }
+        ]
+    },
+    "crowdsourcing": {
+        "userReports": []
+    }
+}

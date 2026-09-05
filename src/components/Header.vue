@@ -8,6 +8,7 @@ const props = defineProps<{
   canAnimate: boolean;
   remainingMinutes: number;
   position: "atPlatform" | "approaching" | "farAway";
+  terminusName?: string;
 }>();
 
 const contextActive = ref(false);
@@ -51,7 +52,7 @@ watch(
         <span>Terminus</span>
         <div class="dynamicSize">
           <div style="overflow: hidden">
-            <h1>{{ departure.destination.name }}</h1>
+            <h1>{{ terminusName || departure.destination.name }}</h1>
           </div>
         </div>
       </div>

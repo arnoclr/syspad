@@ -1,7 +1,10 @@
 import dayjs, { Dayjs } from "dayjs";
 import { onMounted, onUnmounted, ref, type Ref } from "vue";
 import { nextTrainJourneys } from "../fetch";
-import type { SimpleJourney } from "../services/Wagon";
+import {
+  getMockJourneyUrl,
+  type SimpleJourney,
+} from "../services/Wagon";
 import type { ApplicationParams } from "../types";
 import { useDocumentVisibility } from "@vueuse/core";
 
@@ -12,6 +15,7 @@ export function useJourneys(params: Ref<ApplicationParams>) {
   const journeys = ref<SimpleJourney[] | null>(null);
   const nextOptimizedRefreshDate = ref(dayjs());
   const visibility = useDocumentVisibility();
+  const mockJourneyUrl = getMockJourneyUrl();
 
   async function updateJourneys() {
     if (params.value === null) return false;
@@ -22,6 +26,8 @@ export function useJourneys(params: Ref<ApplicationParams>) {
       params.value.lineId,
       params.value.terminusPosition,
       journeys.value || [],
+      mockJourneyUrl ? 1 : 4,
+      mockJourneyUrl,
     );
 
     lastUpdate.value = dayjs();

@@ -45,6 +45,29 @@ export type SimpleJourney = {
   skippedStops: Set<string>;
 };
 
+export function reachableStops(journey: {
+  stops: SimpleStop[];
+  closedStops: Set<string>;
+}): SimpleStop[] {
+  const result: SimpleStop[] = [];
+
+  for (const stop of journey.stops) {
+    if (journey.closedStops.has(stop.id)) break;
+    result.push(stop);
+  }
+
+  return result;
+}
+
+export function getMockJourneyUrl(): string | undefined {
+  const mockFile = new URLSearchParams(window.location.search).get("mock");
+  if (mockFile === null) {
+    return undefined;
+  }
+
+  return `${import.meta.env.BASE_URL ?? "/"}${mockFile || "partialTerminus.mock.json"}`;
+}
+
 function processSVG(svg: string): string {
   return svg
     .replace(/width="[^"]+"/, "")
@@ -159,7 +182,8 @@ export class Wagon {
 
   public static async journey(
     journeyId: string,
-    region: Point
+    region: Point,
+    mockUrl?: string
   ): Promise<{
     id: string;
     stops: SimpleStop[];
@@ -175,7 +199,9 @@ export class Wagon {
     params.append("compatibilityDate", "2025-01-21");
     params.append("apiKey", this.apiKey);
 
-    const response = await fetch(`${this.baseUrl}?${params.toString()}`);
+    const response = await fetch(
+      mockUrl ?? `${this.baseUrl}?${params.toString()}`
+    );
 
     if (!response.ok) {
       throw new Error("Failed to fetch journey");

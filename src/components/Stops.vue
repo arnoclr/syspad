@@ -4,9 +4,15 @@ import { computed, ref, watch } from "vue";
 import { Graph } from "../app/Graph";
 import { isInParis } from "../geo";
 import { getFixedPosition } from "../layout";
-import type { SimpleJourney, SimpleStop } from "../services/Wagon";
+import {
+  reachableStops,
+  type SimpleJourney,
+  type SimpleStop,
+} from "../services/Wagon";
 import AnimatedPath from "./AnimatedPath.vue";
+import RotatingRing from "./RotatingRing.vue";
 import StopName from "./StopName.vue";
+import XMark from "./XMark.vue";
 
 const props = defineProps<{
   journeys: SimpleJourney[];
@@ -15,6 +21,14 @@ const props = defineProps<{
 }>();
 
 const paths = ref<
+  {
+    points: { x: number; y: number }[];
+    isAnimated: boolean;
+    isInactive: boolean;
+  }[]
+>([]);
+
+const terminusPaths = ref<
   {
     points: { x: number; y: number }[];
     isAnimated: boolean;
@@ -36,15 +50,9 @@ const skippedStops = computed(
   () => props.journeys.at(0)?.skippedStops || new Set<string>(),
 );
 
-// const closedStops = computed(() =>
-//   props.journeys.reduce((acc, journey) => {
-//     for (const id of journey.closedStops) {
-//       acc.add(id);
-//     }
-
-//     return acc;
-//   }, new Set<SimpleStop["id"]>())
-// );
+const closedStops = computed(
+  () => props.journeys.at(0)?.closedStops || new Set<string>(),
+);
 
 const stopsInParis = computed(() => {
   return props.journeys.at(0)?.stops.filter((stop) => isInParis(stop)) || [];
@@ -74,12 +82,31 @@ function checkIfSomeStopsAreOutOfScreen() {
 
 const nextDesservedStops = computed(() => {
   const stops = new Set<SimpleStop["id"]>();
+  const journey = props.journeys.at(0);
 
-  for (const stop of props.journeys.at(0)?.stops ?? []) {
+  if (!journey) {
+    return stops;
+  }
+
+  for (const stop of reachableStops(journey)) {
     stops.add(stop.id);
   }
 
   return stops;
+});
+
+const partialTerminusId = computed(() => {
+  const journey = props.journeys.at(0);
+  if (!journey) {
+    return undefined;
+  }
+
+  const reachable = reachableStops(journey);
+  if (reachable.at(-1)?.id === journey.stops.at(-1)?.id) {
+    return undefined;
+  }
+
+  return reachable.at(-1)?.id;
 });
 
 function isStopHidden(
@@ -104,35 +131,56 @@ function northToSouth(a: SimpleStop[], b: SimpleStop[]): number {
   return meanLatitude(b) - meanLatitude(a);
 }
 
+function pointsForStops(stops: SimpleStop[]): { x: number; y: number }[] {
+  return stops.flatMap((stop) => {
+    const element = document.getElementById(stop.id);
+    if (!element) {
+      return { x: 0, y: 0 };
+    }
+
+    const visualBalancer = document.getElementById(
+      `visual-balancer-${stop.id}`,
+    );
+
+    if (visualBalancer) {
+      return [getFixedPosition(element), getFixedPosition(visualBalancer)];
+    }
+
+    return getFixedPosition(element);
+  });
+}
+
 function updatePaths() {
   const _paths = [];
+  const _terminusPaths = [];
 
   for (const journey of props.journeys) {
-    const points = journey.stops.flatMap((stop) => {
-      const element = document.getElementById(stop.id);
-      if (!element) {
-        return { x: 0, y: 0 };
-      }
-
-      const visualBalancer = document.getElementById(
-        `visual-balancer-${stop.id}`,
-      );
-
-      if (visualBalancer) {
-        return [getFixedPosition(element), getFixedPosition(visualBalancer)];
-      }
-
-      return getFixedPosition(element);
-    });
+    const reachable = reachableStops(journey);
 
     _paths.push({
-      points,
+      points: pointsForStops(reachable),
       isAnimated: true,
       isInactive: false,
     });
+
+    const lastReachable = reachable.at(-1);
+    const lastStop = journey.stops.at(-1);
+
+    if (lastReachable && lastStop && lastReachable.id !== lastStop.id) {
+      const startIndex = journey.stops.findIndex(
+        (stop) => stop.id === lastReachable.id,
+      );
+
+      _terminusPaths.push({
+        points: pointsForStops(journey.stops.slice(startIndex)),
+        isAnimated: false,
+        isInactive: true,
+      });
+    }
   }
 
   paths.value = _paths;
+  terminusPaths.value = _terminusPaths;
 }
 
 const parisCirclePosition = ref({ xLeft: "0vh", xRight: "0vh", y: "0vh" });
@@ -205,6 +253,15 @@ watch(
       :static="mode === 'atPlatform' && i === 0 && canAnimate"
       v-for="(path, i) in paths"
     ></AnimatedPath>
+    <AnimatedPath
+      :points="path.points"
+      color="D6D6D6"
+      :is-animated="false"
+      :is-inactive="true"
+      :can-animate="canAnimate"
+      :static="true"
+      v-for="path in terminusPaths"
+    ></AnimatedPath>
   </div>
   <div
     v-if="stopsInParis.length > 0"
@@ -246,6 +303,8 @@ watch(
             hidden: i === 0 && k === 0,
             origin: stop.id === nextDesservedStops.values().next().value,
             terminus: stop.id === [...nextDesservedStops.values()].at(-1),
+            partialTerminus: stop.id === partialTerminusId,
+            closed: closedStops.has(stop.id),
             appear: canAnimate,
           }"
           :style="{
@@ -277,7 +336,10 @@ watch(
             :class="{
               animated: backgroundColor(stop.id) === 'var(--title-color)',
             }"
-          ></div>
+          >
+            <RotatingRing v-if="stop.id === partialTerminusId" />
+            <XMark v-if="closedStops.has(stop.id)" />
+          </div>
         </div>
         <div class="stop" v-if="group.length > 1 && floor.length === 1">
           <StopName
@@ -414,6 +476,14 @@ watch(
 .groups:not(.static) .stop.active.terminus .dot {
   background-color: var(--line-color);
   box-shadow: 0 0 0 0.5vh var(--line-color);
+}
+
+.groups:not(.static) .stop.active.terminus.partialTerminus .dot {
+  background-color: white;
+}
+
+.groups:not(.static) .stop:not(.active).closed .dot {
+  opacity: 1;
 }
 
 .stop.hidden:not(.active) {

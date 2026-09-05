@@ -13,7 +13,7 @@ import { useArrivingStatus } from "./composables/useArrivingStatus";
 import { useJourneys } from "./composables/useJourneys";
 import { extractNextUniqueDepartures } from "./journeys";
 import { getFixedPosition } from "./layout";
-import type { SimpleDeparture } from "./services/Wagon";
+import { reachableStops, type SimpleDeparture } from "./services/Wagon";
 import type { ApplicationParams } from "./types";
 
 interface MiniETAPosition {
@@ -51,6 +51,15 @@ const miniETAs = computedAsync<MiniETAPosition[]>(async () => {
 }, []);
 
 const lineLogo = computed(() => journeys.value?.at(0)?.line.numberShapeSvg);
+
+const terminusName = computed(() => {
+  const journey = journeys.value?.at(0);
+  if (!journey) {
+    return undefined;
+  }
+
+  return reachableStops(journey).at(-1)?.name;
+});
 
 const { ready: canAnimate, start: preventAnimation } = useTimeout(4000, {
   controls: true,
@@ -105,6 +114,7 @@ watch(
         :departure="nextDeparture"
         :remaining-minutes="remainingMinutes"
         :position="status"
+        :terminus-name="terminusName"
       ></Header>
       <Stops
         :can-animate="canAnimate"
